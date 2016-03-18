@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4wV-1z-RfI">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="IDBoard" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rVe-oS-Mbr">
+                                <rect key="frame" x="20" y="63" width="71" height="30"/>
+                                <state key="normal" title="Planning"/>
+                                <connections>
+                                    <action selector="planningButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sm8-O5-k8J"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KaZ-QU-W4b">
+                                <rect key="frame" x="20" y="96" width="71" height="30"/>
+                                <state key="normal" title="Historique"/>
+                                <connections>
+                                    <action selector="historiqueButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KFo-gg-X3D"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="liL-Me-aQ6">
+                                <rect key="frame" x="20" y="139" width="118" height="30"/>
+                                <state key="normal" title="Retard/Absence"/>
+                                <connections>
+                                    <action selector="retardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RxG-qV-Cjh"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qEJ-ha-QMo" userLabel="Retard">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VZd-L7-v8i">
+                                        <rect key="frame" x="0.0" y="22" width="600" height="44"/>
+                                        <items>
+                                            <navigationItem title="Retard/Absence" id="8rf-Af-HFd">
+                                                <barButtonItem key="leftBarButtonItem" image="hamburger.png" id="WvW-pF-SjC">
+                                                    <connections>
+                                                        <action selector="hambRetard:" destination="BYZ-38-t0r" id="dRm-It-Ydr"/>
+                                                    </connections>
+                                                </barButtonItem>
+                                            </navigationItem>
+                                        </items>
+                                    </navigationBar>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="VZd-L7-v8i" secondAttribute="trailing" id="AGC-m2-WUh"/>
+                                    <constraint firstItem="VZd-L7-v8i" firstAttribute="top" secondItem="qEJ-ha-QMo" secondAttribute="topMargin" constant="15" id="Efm-zR-pEY"/>
+                                    <constraint firstItem="VZd-L7-v8i" firstAttribute="leading" secondItem="qEJ-ha-QMo" secondAttribute="leading" id="bUY-Le-5NF"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BU2-5n-hsH" userLabel="Planning">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cmh-Hc-FFG">
+                                        <rect key="frame" x="0.0" y="21" width="600" height="44"/>
+                                        <items>
+                                            <navigationItem title="Planning" id="P05-8e-e2j">
+                                                <barButtonItem key="leftBarButtonItem" image="hamburger.png" id="ez4-cc-AyW">
+                                                    <connections>
+                                                        <action selector="hambPlanning:" destination="BYZ-38-t0r" id="NuN-nu-c6n"/>
+                                                    </connections>
+                                                </barButtonItem>
+                                            </navigationItem>
+                                        </items>
+                                    </navigationBar>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="cmh-Hc-FFG" firstAttribute="leading" secondItem="BU2-5n-hsH" secondAttribute="leading" id="KHV-3q-NHa"/>
+                                    <constraint firstItem="cmh-Hc-FFG" firstAttribute="top" secondItem="BU2-5n-hsH" secondAttribute="topMargin" constant="15" id="nnq-pI-qOU"/>
+                                    <constraint firstAttribute="trailing" secondItem="cmh-Hc-FFG" secondAttribute="trailing" id="ueS-vG-POZ"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jTg-wb-5XM" userLabel="Historique">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IB3-Xr-keN">
+                                        <rect key="frame" x="-8" y="24" width="600" height="44"/>
+                                        <items>
+                                            <navigationItem title="Historique" id="yFm-FQ-KGe">
+                                                <barButtonItem key="leftBarButtonItem" image="hamburger.png" id="KnP-DT-jER">
+                                                    <connections>
+                                                        <action selector="hambHistorique:" destination="BYZ-38-t0r" id="U68-n8-kDa"/>
+                                                    </connections>
+                                                </barButtonItem>
+                                            </navigationItem>
+                                        </items>
+                                    </navigationBar>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="IB3-Xr-keN" firstAttribute="top" secondItem="jTg-wb-5XM" secondAttribute="topMargin" constant="15" id="Bbj-NL-5VG"/>
+                                    <constraint firstAttribute="trailing" secondItem="IB3-Xr-keN" secondAttribute="trailing" id="cXb-Wu-EYd"/>
+                                    <constraint firstItem="IB3-Xr-keN" firstAttribute="leading" secondItem="jTg-wb-5XM" secondAttribute="leading" id="gcd-vu-ypq"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="qEJ-ha-QMo" secondAttribute="bottom" id="08n-Lg-ZHI"/>
+                            <constraint firstItem="KaZ-QU-W4b" firstAttribute="top" secondItem="rVe-oS-Mbr" secondAttribute="bottom" constant="8" symbolic="YES" id="2Bx-Sr-qoA"/>
+                            <constraint firstItem="qEJ-ha-QMo" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="3sE-Fl-cwr"/>
+                            <constraint firstItem="qEJ-ha-QMo" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="DLE-GD-omm"/>
+                            <constraint firstItem="rVe-oS-Mbr" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="38" id="Dac-t6-hLj"/>
+                            <constraint firstItem="jTg-wb-5XM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Fnm-yK-Oba"/>
+                            <constraint firstItem="BU2-5n-hsH" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="KAB-Nl-Fyk"/>
+                            <constraint firstItem="KaZ-QU-W4b" firstAttribute="leading" secondItem="rVe-oS-Mbr" secondAttribute="leading" id="M5g-4j-9Ys"/>
+                            <constraint firstItem="liL-Me-aQ6" firstAttribute="leading" secondItem="rVe-oS-Mbr" secondAttribute="leading" id="MAO-tk-PNS"/>
+                            <constraint firstItem="liL-Me-aQ6" firstAttribute="top" secondItem="KaZ-QU-W4b" secondAttribute="bottom" constant="8" symbolic="YES" id="UZb-qt-qeN"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jTg-wb-5XM" secondAttribute="bottom" id="Ykt-G7-7s6"/>
+                            <constraint firstItem="rVe-oS-Mbr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="g4V-7L-hDZ"/>
+                            <constraint firstItem="jTg-wb-5XM" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="lGJ-Zj-HwJ"/>
+                            <constraint firstItem="BU2-5n-hsH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="usP-QY-Bwc"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="BU2-5n-hsH" secondAttribute="bottom" id="wmp-5D-Tdi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="historique" destination="jTg-wb-5XM" id="EL2-Za-n5X"/>
+                        <outlet property="historiqueBarButton" destination="KnP-DT-jER" id="fNw-Qd-SKq"/>
+                        <outlet property="planning" destination="BU2-5n-hsH" id="fRU-bH-sMp"/>
+                        <outlet property="planningButton" destination="ez4-cc-AyW" id="blS-bj-PI5"/>
+                        <outlet property="retard" destination="qEJ-ha-QMo" id="ohv-TP-Cyu"/>
+                        <outlet property="retardBarButton" destination="WvW-pF-SjC" id="jN3-dS-9AT"/>
+                        <segue destination="LL8-OU-gEG" kind="unwind" identifier="GoToFront" unwindAction="prepareForUnwind:" id="fbO-Ym-ERU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="LL8-OU-gEG" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1215" y="693"/>
+        </scene>
+        <!--Log In View Controller-->
+        <scene sceneID="RPE-Vo-TEI">
+            <objects>
+                <viewController id="4wV-1z-RfI" customClass="LogInViewController" customModule="IDBoard" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="61V-f6-oqY"/>
+                        <viewControllerLayoutGuide type="bottom" id="pnH-yG-IQd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="acn-eI-vTO">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="campusid_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="Z8n-Ul-iAh">
+                                <rect key="frame" x="0.0" y="35" width="600" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="CY5-q6-nBQ"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="No IDBoard" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="lXt-97-Dja">
+                                <rect key="frame" x="20" y="240" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mot de passe" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Ydc-yx-c2c">
+                                <rect key="frame" x="20" y="278" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" secureTextEntry="YES"/>
+                            </textField>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vFw-dq-Rbj">
+                                <rect key="frame" x="188" y="325" width="51" height="31"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mémoriser" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bAM-zg-xs7">
+                                <rect key="frame" x="252" y="328" width="96" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Vf-i1-6eK">
+                                <rect key="frame" x="241" y="433" width="119" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Se connecter"/>
+                                <connections>
+                                    <action selector="connectionButton:" destination="4wV-1z-RfI" eventType="touchUpInside" id="jit-g2-Q6v"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Z8n-Ul-iAh" firstAttribute="leading" secondItem="acn-eI-vTO" secondAttribute="leading" id="853-Bv-VJ1"/>
+                            <constraint firstAttribute="trailing" secondItem="Z8n-Ul-iAh" secondAttribute="trailing" id="8fC-fD-aoD"/>
+                            <constraint firstItem="bAM-zg-xs7" firstAttribute="centerX" secondItem="acn-eI-vTO" secondAttribute="centerX" id="8k6-Hz-1rF"/>
+                            <constraint firstItem="bAM-zg-xs7" firstAttribute="top" secondItem="Ydc-yx-c2c" secondAttribute="bottom" constant="20" id="Css-M8-EuY"/>
+                            <constraint firstItem="Z8n-Ul-iAh" firstAttribute="top" secondItem="61V-f6-oqY" secondAttribute="bottom" constant="15" id="DzS-0X-K3h"/>
+                            <constraint firstItem="vFw-dq-Rbj" firstAttribute="centerY" secondItem="bAM-zg-xs7" secondAttribute="centerY" id="E5C-1F-XuB"/>
+                            <constraint firstItem="Ydc-yx-c2c" firstAttribute="top" secondItem="lXt-97-Dja" secondAttribute="bottom" constant="8" symbolic="YES" id="NvH-VA-CAj"/>
+                            <constraint firstItem="9Vf-i1-6eK" firstAttribute="top" secondItem="bAM-zg-xs7" secondAttribute="bottom" constant="81" id="PZE-yi-1uc"/>
+                            <constraint firstItem="bAM-zg-xs7" firstAttribute="leading" secondItem="vFw-dq-Rbj" secondAttribute="trailing" constant="15" id="W02-X8-a9P"/>
+                            <constraint firstItem="9Vf-i1-6eK" firstAttribute="centerX" secondItem="acn-eI-vTO" secondAttribute="centerX" id="XHu-DW-nsM"/>
+                            <constraint firstItem="lXt-97-Dja" firstAttribute="trailing" secondItem="acn-eI-vTO" secondAttribute="trailingMargin" id="aoZ-DA-rDJ"/>
+                            <constraint firstItem="lXt-97-Dja" firstAttribute="top" secondItem="Z8n-Ul-iAh" secondAttribute="bottom" constant="55" id="e32-Y4-E8I"/>
+                            <constraint firstItem="lXt-97-Dja" firstAttribute="leading" secondItem="acn-eI-vTO" secondAttribute="leadingMargin" id="f5C-yR-xl3"/>
+                            <constraint firstItem="Ydc-yx-c2c" firstAttribute="leading" secondItem="lXt-97-Dja" secondAttribute="leading" id="fe3-7Y-mqV"/>
+                            <constraint firstItem="Ydc-yx-c2c" firstAttribute="trailing" secondItem="lXt-97-Dja" secondAttribute="trailing" id="pHS-y6-nEf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="idTextField" destination="lXt-97-Dja" id="uXY-m1-wTp"/>
+                        <outlet property="passwordTextField" destination="Ydc-yx-c2c" id="7qs-24-pE7"/>
+                        <outlet property="saveCredentialsSwitch" destination="vFw-dq-Rbj" id="if2-lO-A29"/>
+                        <outlet property="top" destination="DzS-0X-K3h" id="N53-kV-n6v"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="GoToApp" id="cuw-N0-kio"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ejw-vO-lfK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="431" y="693"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="campusid_logo.png" width="1263" height="313"/>
+        <image name="hamburger.png" width="45" height="20"/>
+    </resources>
+</document>

@@ -130,20 +130,18 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     @IBAction func connectionButton(sender: AnyObject) {
         let id = idTextField.text!
         let password = passwordTextField.text!
-
+        
         if id.isEmpty || password.isEmpty {
             showAlert("Error!", message: "User ID and password fields should be filled", actionTitle: "OK")
         }
 
         // Send a POST HTTP request with the user registration details
-        let url = NSURL(string: url_root + "idboard.php")!
+        let message = url_root + "idboard.php" + "?id=\(id)&password=\(password)"
+//        print(message)
+        let url = NSURL(string: message)!
 
         let request = NSMutableURLRequest(URL: url)
-        request.HTTPMethod = "POST"
-
-        let messagePOST = "id=\(id)&password=\(password)"
-
-        request.HTTPBody = messagePOST.dataUsingEncoding(NSUTF8StringEncoding)
+        request.HTTPMethod = "GET"
 
         let task = NSURLSession.sharedSession().dataTaskWithRequest(request) { (data, response, error) -> Void in
             dispatch_async(dispatch_get_main_queue()) {
@@ -156,10 +154,10 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
                 if let urlContent = data {
                     do {
                         let jsonResult = try NSJSONSerialization.JSONObjectWithData(urlContent, options: NSJSONReadingOptions.MutableContainers)
-                        print(jsonResult)
+//                        print(jsonResult)
                         if let res = jsonResult["result"] {
                             if res as! String == "YES" {
-                                print("Successful authentification")
+                                //print("Successful authentification")
                                 NSUserDefaults.standardUserDefaults().setObject(self.idTextField.text, forKey: "id")
                                 NSUserDefaults.standardUserDefaults().setObject(self.passwordTextField.text, forKey: "password")
 
@@ -174,7 +172,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
                         print("JSON serialization failure")
                     }
                 }
-                //print(response)
+//                print(response)
             }
         }
         task.resume()

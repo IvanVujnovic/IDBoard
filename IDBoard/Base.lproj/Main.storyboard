@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4wV-1z-RfI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4wV-1z-RfI">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -18,8 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rVe-oS-Mbr">
-                                <rect key="frame" x="20" y="63" width="71" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rVe-oS-Mbr">
+                                <rect key="frame" x="20" y="58" width="59" height="30"/>
                                 <state key="normal" title="Planning"/>
                                 <connections>
                                     <action selector="planningButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sm8-O5-k8J"/>
@@ -32,18 +32,18 @@
                                     <action selector="historiqueButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KFo-gg-X3D"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="liL-Me-aQ6">
-                                <rect key="frame" x="20" y="139" width="118" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="liL-Me-aQ6">
+                                <rect key="frame" x="20" y="134" width="110" height="30"/>
                                 <state key="normal" title="Retard/Absence"/>
                                 <connections>
                                     <action selector="retardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RxG-qV-Cjh"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qEJ-ha-QMo" userLabel="Retard">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qEJ-ha-QMo" userLabel="Retard">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
-                                    <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VZd-L7-v8i">
-                                        <rect key="frame" x="0.0" y="22" width="600" height="44"/>
+                                    <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VZd-L7-v8i">
+                                        <rect key="frame" x="0.0" y="23" width="600" height="44"/>
                                         <items>
                                             <navigationItem title="Retard/Absence" id="8rf-Af-HFd">
                                                 <barButtonItem key="leftBarButtonItem" image="hamburger.png" id="WvW-pF-SjC">
@@ -62,11 +62,11 @@
                                     <constraint firstItem="VZd-L7-v8i" firstAttribute="leading" secondItem="qEJ-ha-QMo" secondAttribute="leading" id="bUY-Le-5NF"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BU2-5n-hsH" userLabel="Planning">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BU2-5n-hsH" userLabel="Planning">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
-                                    <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cmh-Hc-FFG">
-                                        <rect key="frame" x="0.0" y="21" width="600" height="44"/>
+                                    <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cmh-Hc-FFG">
+                                        <rect key="frame" x="0.0" y="23" width="600" height="44"/>
                                         <items>
                                             <navigationItem title="Planning" id="P05-8e-e2j">
                                                 <barButtonItem key="leftBarButtonItem" image="hamburger.png" id="ez4-cc-AyW">
@@ -77,19 +77,55 @@
                                             </navigationItem>
                                         </items>
                                     </navigationBar>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00 - 00 MonthMonth YYYY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ZO-k5-A06">
+                                        <rect key="frame" x="196" y="82" width="208" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PhB-pF-H4m">
+                                        <rect key="frame" x="429" y="74" width="30" height="39"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <state key="normal" title="&gt;"/>
+                                        <connections>
+                                            <action selector="rightRangeDateTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qZR-6a-pdP"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kic-Lv-gZo">
+                                        <rect key="frame" x="141" y="74" width="30" height="39"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <state key="normal" title="&lt;"/>
+                                        <connections>
+                                            <action selector="leftRangeDateTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bY7-pY-cqI"/>
+                                        </connections>
+                                    </button>
+                                    <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xb9-7I-bAs">
+                                        <rect key="frame" x="8" y="123" width="584" height="477"/>
+                                        <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                                    </webView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="6ZO-k5-A06" firstAttribute="top" secondItem="cmh-Hc-FFG" secondAttribute="bottom" constant="15" id="38Y-4y-fFv"/>
+                                    <constraint firstItem="Xb9-7I-bAs" firstAttribute="top" secondItem="6ZO-k5-A06" secondAttribute="bottom" constant="20" id="4r7-Y0-Hit"/>
+                                    <constraint firstAttribute="bottom" secondItem="Xb9-7I-bAs" secondAttribute="bottom" id="8Zm-LC-IWW"/>
+                                    <constraint firstItem="Xb9-7I-bAs" firstAttribute="leading" secondItem="BU2-5n-hsH" secondAttribute="leadingMargin" id="BeH-dQ-Xgl"/>
+                                    <constraint firstItem="6ZO-k5-A06" firstAttribute="centerY" secondItem="Kic-Lv-gZo" secondAttribute="centerY" constant="-1" id="H3m-Zo-Lrn"/>
                                     <constraint firstItem="cmh-Hc-FFG" firstAttribute="leading" secondItem="BU2-5n-hsH" secondAttribute="leading" id="KHV-3q-NHa"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="Xb9-7I-bAs" secondAttribute="trailing" id="Sxq-Ml-oOV"/>
+                                    <constraint firstItem="6ZO-k5-A06" firstAttribute="centerX" secondItem="BU2-5n-hsH" secondAttribute="centerX" id="UgP-iO-alc"/>
+                                    <constraint firstItem="PhB-pF-H4m" firstAttribute="centerY" secondItem="Kic-Lv-gZo" secondAttribute="centerY" id="Vpd-PV-Xhk"/>
                                     <constraint firstItem="cmh-Hc-FFG" firstAttribute="top" secondItem="BU2-5n-hsH" secondAttribute="topMargin" constant="15" id="nnq-pI-qOU"/>
+                                    <constraint firstItem="PhB-pF-H4m" firstAttribute="leading" secondItem="6ZO-k5-A06" secondAttribute="trailing" constant="25" id="p2S-Md-ta6"/>
+                                    <constraint firstItem="6ZO-k5-A06" firstAttribute="leading" secondItem="Kic-Lv-gZo" secondAttribute="trailing" constant="25" id="t9c-Hp-buA"/>
                                     <constraint firstAttribute="trailing" secondItem="cmh-Hc-FFG" secondAttribute="trailing" id="ueS-vG-POZ"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jTg-wb-5XM" userLabel="Historique">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jTg-wb-5XM" userLabel="Historique">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
-                                    <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IB3-Xr-keN">
-                                        <rect key="frame" x="-8" y="24" width="600" height="44"/>
+                                    <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IB3-Xr-keN">
+                                        <rect key="frame" x="0.0" y="23" width="600" height="44"/>
                                         <items>
                                             <navigationItem title="Historique" id="yFm-FQ-KGe">
                                                 <barButtonItem key="leftBarButtonItem" image="hamburger.png" id="KnP-DT-jER">
@@ -114,21 +150,29 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="qEJ-ha-QMo" secondAttribute="bottom" id="08n-Lg-ZHI"/>
                             <constraint firstItem="KaZ-QU-W4b" firstAttribute="top" secondItem="rVe-oS-Mbr" secondAttribute="bottom" constant="8" symbolic="YES" id="2Bx-Sr-qoA"/>
                             <constraint firstItem="qEJ-ha-QMo" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="3sE-Fl-cwr"/>
+                            <constraint firstItem="qEJ-ha-QMo" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="86f-xT-FXL"/>
+                            <constraint firstItem="jTg-wb-5XM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="87J-CU-SI2"/>
                             <constraint firstItem="qEJ-ha-QMo" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="DLE-GD-omm"/>
                             <constraint firstItem="rVe-oS-Mbr" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="38" id="Dac-t6-hLj"/>
                             <constraint firstItem="jTg-wb-5XM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Fnm-yK-Oba"/>
+                            <constraint firstItem="qEJ-ha-QMo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="I8g-UG-6kM"/>
                             <constraint firstItem="BU2-5n-hsH" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="KAB-Nl-Fyk"/>
                             <constraint firstItem="KaZ-QU-W4b" firstAttribute="leading" secondItem="rVe-oS-Mbr" secondAttribute="leading" id="M5g-4j-9Ys"/>
                             <constraint firstItem="liL-Me-aQ6" firstAttribute="leading" secondItem="rVe-oS-Mbr" secondAttribute="leading" id="MAO-tk-PNS"/>
                             <constraint firstItem="liL-Me-aQ6" firstAttribute="top" secondItem="KaZ-QU-W4b" secondAttribute="bottom" constant="8" symbolic="YES" id="UZb-qt-qeN"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jTg-wb-5XM" secondAttribute="bottom" id="Ykt-G7-7s6"/>
+                            <constraint firstItem="jTg-wb-5XM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bwL-jB-j3R"/>
                             <constraint firstItem="rVe-oS-Mbr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="g4V-7L-hDZ"/>
+                            <constraint firstItem="BU2-5n-hsH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hep-B7-sfN"/>
                             <constraint firstItem="jTg-wb-5XM" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="lGJ-Zj-HwJ"/>
                             <constraint firstItem="BU2-5n-hsH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="usP-QY-Bwc"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="BU2-5n-hsH" secondAttribute="bottom" id="wmp-5D-Tdi"/>
+                            <constraint firstItem="BU2-5n-hsH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="zPO-oV-3MU"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="calendarWebView" destination="Xb9-7I-bAs" id="wrY-kn-f2m"/>
+                        <outlet property="dateRangeLabel" destination="6ZO-k5-A06" id="Fbk-PX-y3k"/>
                         <outlet property="historique" destination="jTg-wb-5XM" id="EL2-Za-n5X"/>
                         <outlet property="historiqueBarButton" destination="KnP-DT-jER" id="fNw-Qd-SKq"/>
                         <outlet property="planning" destination="BU2-5n-hsH" id="fRU-bH-sMp"/>

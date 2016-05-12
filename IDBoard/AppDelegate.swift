@@ -12,6 +12,9 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    //let url_root = "http://192.168.0.102/idboard_app/"
+    let url_root = "http://youdome.com/idboard/"
+    
 
     var lastViewController: ViewController?
     var firstViewController: LogInViewController?

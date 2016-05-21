@@ -21,6 +21,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var dateRangeLabel: UILabel!
     @IBOutlet weak var calendarWebView: UIWebView!
     
+    
+    @IBOutlet weak var offresContainerView: UIView!
+    @IBOutlet weak var messagesContainerView: UIView!
+    
+    @IBOutlet weak var messagesOffresSegmentedControl: UISegmentedControl!
+    
+    
+    
     let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate! as! AppDelegate
     var today = NSDate()
     
@@ -37,8 +45,11 @@ class ViewController: UIViewController {
 
         historiqueBarButton.image = UIImage(named: "hamburger")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal)
 
-        hideAll()
-        planning.hidden = false
+//        if appDelegate.keepMessagesView == false {
+            hideAll()
+            planning.hidden = false
+
+        
         
         dateRangeLabel.text = getDateInterval(today)
         
@@ -116,8 +127,13 @@ class ViewController: UIViewController {
         historique.frame = self.view.frame
         retard.frame = self.view.frame
 
-        hideAll()
-        planning.hidden = false
+        if appDelegate.keepMessagesView == false {
+            hideAll()
+            planning.hidden = false
+        } else {
+            appDelegate.keepMessagesView = false
+        }
+        
     }
 
     func goBack() {
@@ -162,6 +178,11 @@ class ViewController: UIViewController {
         flagPlanning = false
         flagHistorique = false
         flagRetard = false
+        
+        messagesContainerView.hidden = false
+        appDelegate.messagesViewController?.reloadMyData()
+        offresContainerView.hidden = true
+        messagesOffresSegmentedControl.selectedSegmentIndex = 0
     }
 
     var flagPlanning = false
@@ -217,7 +238,25 @@ class ViewController: UIViewController {
         let listDates = getListDays(today)
         calendarWebView.loadRequest(getURLRequest(listDates))
     }
+    
+    
+    
 
+    @IBAction func messagesOffresSegmentedControlTap(sender: AnyObject) {
+        let btn = sender as! UISegmentedControl
+        
+        if btn.selectedSegmentIndex == 0 {
+            //print("Messages pressed")
+            messagesContainerView.hidden = false
+            appDelegate.messagesViewController?.reloadMyData()
+            offresContainerView.hidden = true
+            
+        } else {
+            print("Offres pressed")
+            offresContainerView.hidden = false
+            messagesContainerView.hidden = true
+        }
+    }
     
     
     

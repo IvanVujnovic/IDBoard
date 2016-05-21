@@ -18,6 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var lastViewController: ViewController?
     var firstViewController: LogInViewController?
+    var messagesViewController: MessagesTableViewController?
+    var keepMessagesView:Bool = false
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {

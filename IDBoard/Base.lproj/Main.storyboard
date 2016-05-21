@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4wV-1z-RfI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4wV-1z-RfI">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -80,7 +80,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00 - 00 MonthMonth YYYY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ZO-k5-A06">
                                         <rect key="frame" x="196" y="82" width="208" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PhB-pF-H4m">
@@ -136,12 +136,48 @@
                                             </navigationItem>
                                         </items>
                                     </navigationBar>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="mLA-6d-oT1">
+                                        <rect key="frame" x="0.0" y="67" width="600" height="41"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="gJQ-p7-UDq"/>
+                                        </constraints>
+                                        <segments>
+                                            <segment title="Messages"/>
+                                            <segment title="Offres"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="messagesOffresSegmentedControlTap:" destination="BYZ-38-t0r" eventType="valueChanged" id="DJb-nx-yqX"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g1m-Ir-SYk" userLabel="Offres Container View">
+                                        <rect key="frame" x="0.0" y="107" width="600" height="493"/>
+                                        <connections>
+                                            <segue destination="FCJ-L6-hba" kind="embed" identifier="Offres" id="H3x-4Q-wpU"/>
+                                        </connections>
+                                    </containerView>
+                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SIt-Wg-3YW" userLabel="Messages Container View">
+                                        <rect key="frame" x="0.0" y="115" width="600" height="485"/>
+                                        <connections>
+                                            <segue destination="PsZ-HQ-Oa5" kind="embed" identifier="Messages" id="DHa-9m-KpZ"/>
+                                        </connections>
+                                    </containerView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="g1m-Ir-SYk" secondAttribute="bottom" id="2uN-cI-tZN"/>
+                                    <constraint firstItem="mLA-6d-oT1" firstAttribute="leading" secondItem="jTg-wb-5XM" secondAttribute="leading" id="7wN-qL-2W1"/>
+                                    <constraint firstItem="g1m-Ir-SYk" firstAttribute="leading" secondItem="jTg-wb-5XM" secondAttribute="leading" id="8Qv-gk-akC"/>
+                                    <constraint firstAttribute="trailing" secondItem="mLA-6d-oT1" secondAttribute="trailing" id="A3U-hx-qjH"/>
                                     <constraint firstItem="IB3-Xr-keN" firstAttribute="top" secondItem="jTg-wb-5XM" secondAttribute="topMargin" constant="15" id="Bbj-NL-5VG"/>
+                                    <constraint firstItem="SIt-Wg-3YW" firstAttribute="top" secondItem="mLA-6d-oT1" secondAttribute="bottom" constant="8" symbolic="YES" id="PMo-4G-CDM"/>
+                                    <constraint firstItem="SIt-Wg-3YW" firstAttribute="leading" secondItem="jTg-wb-5XM" secondAttribute="leading" id="Tke-XB-aWe"/>
+                                    <constraint firstAttribute="bottom" secondItem="SIt-Wg-3YW" secondAttribute="bottom" id="YQw-qr-sFj"/>
+                                    <constraint firstAttribute="trailing" secondItem="SIt-Wg-3YW" secondAttribute="trailing" id="YfJ-T8-lqQ"/>
+                                    <constraint firstItem="g1m-Ir-SYk" firstAttribute="top" secondItem="mLA-6d-oT1" secondAttribute="bottom" id="azX-ul-BHR"/>
                                     <constraint firstAttribute="trailing" secondItem="IB3-Xr-keN" secondAttribute="trailing" id="cXb-Wu-EYd"/>
+                                    <constraint firstItem="mLA-6d-oT1" firstAttribute="top" secondItem="IB3-Xr-keN" secondAttribute="bottom" symbolic="YES" id="e8F-Vz-vaP"/>
                                     <constraint firstItem="IB3-Xr-keN" firstAttribute="leading" secondItem="jTg-wb-5XM" secondAttribute="leading" id="gcd-vu-ypq"/>
+                                    <constraint firstAttribute="trailing" secondItem="g1m-Ir-SYk" secondAttribute="trailing" id="qds-4K-3gS"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -175,6 +211,9 @@
                         <outlet property="dateRangeLabel" destination="6ZO-k5-A06" id="Fbk-PX-y3k"/>
                         <outlet property="historique" destination="jTg-wb-5XM" id="EL2-Za-n5X"/>
                         <outlet property="historiqueBarButton" destination="KnP-DT-jER" id="fNw-Qd-SKq"/>
+                        <outlet property="messagesContainerView" destination="SIt-Wg-3YW" id="8Zq-WS-EKM"/>
+                        <outlet property="messagesOffresSegmentedControl" destination="mLA-6d-oT1" id="aNP-v6-qNg"/>
+                        <outlet property="offresContainerView" destination="g1m-Ir-SYk" id="eKi-J9-9eK"/>
                         <outlet property="planning" destination="BU2-5n-hsH" id="fRU-bH-sMp"/>
                         <outlet property="planningButton" destination="ez4-cc-AyW" id="blS-bj-PI5"/>
                         <outlet property="retard" destination="qEJ-ha-QMo" id="ohv-TP-Cyu"/>
@@ -221,7 +260,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mémoriser" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bAM-zg-xs7">
                                 <rect key="frame" x="252" y="328" width="96" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Vf-i1-6eK">
@@ -263,6 +302,54 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ejw-vO-lfK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="431" y="693"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Nye-ik-91i">
+            <objects>
+                <viewController id="FCJ-L6-hba" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DE7-Ep-wIm"/>
+                        <viewControllerLayoutGuide type="bottom" id="uXC-cO-Rwf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3q3-Hb-3SZ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="493"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Fo-mw-Ptf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1215" y="1506.5"/>
+        </scene>
+        <!--Messages Table View Controller-->
+        <scene sceneID="keg-pc-xFe">
+            <objects>
+                <tableViewController id="PsZ-HQ-Oa5" customClass="MessagesTableViewController" customModule="IDBoard" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="CXn-IT-ZJk">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="485"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="messageCell" id="QHN-vr-ABR">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QHN-vr-ABR" id="GgL-4c-Nte">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="PsZ-HQ-Oa5" id="Hos-G0-SqZ"/>
+                            <outlet property="delegate" destination="PsZ-HQ-Oa5" id="R35-5i-nhG"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="tableView" destination="CXn-IT-ZJk" id="pc6-Cl-SeE"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mqj-Ya-btZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1917" y="1560"/>
         </scene>
     </scenes>
     <resources>

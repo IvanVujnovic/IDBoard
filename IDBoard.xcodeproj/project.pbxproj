@@ -16,6 +16,8 @@
 		DABC980F1C9B287700D5CB5B /* campusid_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = DABC980E1C9B287700D5CB5B /* campusid_icon.png */; };
 		DABC98111C9B2CAF00D5CB5B /* campusid_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = DABC98101C9B2CAF00D5CB5B /* campusid_logo.png */; };
 		DABC98131C9B2CE600D5CB5B /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABC98121C9B2CE600D5CB5B /* LogInViewController.swift */; };
+		DADAE5641CEB5A52004F5DE1 /* MessagesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADAE5631CEB5A52004F5DE1 /* MessagesTableViewController.swift */; };
+		DADAE5681CEB7FE5004F5DE1 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADAE5671CEB7FE5004F5DE1 /* Message.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		DABC980E1C9B287700D5CB5B /* campusid_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = campusid_icon.png; sourceTree = "<group>"; };
 		DABC98101C9B2CAF00D5CB5B /* campusid_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = campusid_logo.png; sourceTree = "<group>"; };
 		DABC98121C9B2CE600D5CB5B /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		DADAE5631CEB5A52004F5DE1 /* MessagesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesTableViewController.swift; sourceTree = "<group>"; };
+		DADAE5671CEB7FE5004F5DE1 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,8 @@
 				DABC97FD1C9AF3BB00D5CB5B /* Assets.xcassets */,
 				DABC97FF1C9AF3BB00D5CB5B /* LaunchScreen.storyboard */,
 				DABC98021C9AF3BB00D5CB5B /* Info.plist */,
+				DADAE5631CEB5A52004F5DE1 /* MessagesTableViewController.swift */,
+				DADAE5671CEB7FE5004F5DE1 /* Message.swift */,
 			);
 			path = IDBoard;
 			sourceTree = "<group>";
@@ -104,7 +110,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0720;
-				ORGANIZATIONNAME = Campusid;
+				ORGANIZATIONNAME = campusid;
 				TargetAttributes = {
 					DABC97F21C9AF3BB00D5CB5B = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -151,7 +157,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DABC97F91C9AF3BB00D5CB5B /* ViewController.swift in Sources */,
+				DADAE5641CEB5A52004F5DE1 /* MessagesTableViewController.swift in Sources */,
 				DABC97F71C9AF3BB00D5CB5B /* AppDelegate.swift in Sources */,
+				DADAE5681CEB7FE5004F5DE1 /* Message.swift in Sources */,
 				DABC98131C9B2CE600D5CB5B /* LogInViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

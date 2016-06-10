@@ -20,21 +20,27 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rVe-oS-Mbr">
                                 <rect key="frame" x="20" y="58" width="59" height="30"/>
-                                <state key="normal" title="Planning"/>
+                                <state key="normal" title="Planning">
+                                    <color key="titleColor" red="0.69803921568627447" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="planningButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sm8-O5-k8J"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KaZ-QU-W4b">
                                 <rect key="frame" x="20" y="96" width="71" height="30"/>
-                                <state key="normal" title="Historique"/>
+                                <state key="normal" title="Historique">
+                                    <color key="titleColor" red="0.69803921570000005" green="0.1333333333" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="historiqueButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KFo-gg-X3D"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="liL-Me-aQ6">
                                 <rect key="frame" x="20" y="134" width="110" height="30"/>
-                                <state key="normal" title="Retard/Absence"/>
+                                <state key="normal" title="Retard/Absence">
+                                    <color key="titleColor" red="0.69803921570000005" green="0.1333333333" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="retardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RxG-qV-Cjh"/>
                                 </connections>
@@ -65,18 +71,6 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BU2-5n-hsH" userLabel="Planning">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
-                                    <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cmh-Hc-FFG">
-                                        <rect key="frame" x="0.0" y="23" width="600" height="44"/>
-                                        <items>
-                                            <navigationItem title="Planning" id="P05-8e-e2j">
-                                                <barButtonItem key="leftBarButtonItem" image="hamburger.png" id="ez4-cc-AyW">
-                                                    <connections>
-                                                        <action selector="hambPlanning:" destination="BYZ-38-t0r" id="NuN-nu-c6n"/>
-                                                    </connections>
-                                                </barButtonItem>
-                                            </navigationItem>
-                                        </items>
-                                    </navigationBar>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00 - 00 MonthMonth YYYY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ZO-k5-A06">
                                         <rect key="frame" x="196" y="82" width="208" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -103,6 +97,18 @@
                                         <rect key="frame" x="8" y="123" width="584" height="477"/>
                                         <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
                                     </webView>
+                                    <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cmh-Hc-FFG">
+                                        <rect key="frame" x="0.0" y="23" width="600" height="44"/>
+                                        <items>
+                                            <navigationItem title="Planning" id="P05-8e-e2j">
+                                                <barButtonItem key="leftBarButtonItem" image="hamburger.png" id="ez4-cc-AyW">
+                                                    <connections>
+                                                        <action selector="hambPlanning:" destination="BYZ-38-t0r" id="NuN-nu-c6n"/>
+                                                    </connections>
+                                                </barButtonItem>
+                                            </navigationItem>
+                                        </items>
+                                    </navigationBar>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -124,6 +130,18 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jTg-wb-5XM" userLabel="Historique">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
+                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g1m-Ir-SYk" userLabel="Offres Container View">
+                                        <rect key="frame" x="0.0" y="107" width="600" height="493"/>
+                                        <connections>
+                                            <segue destination="FCJ-L6-hba" kind="embed" identifier="Offres" id="H3x-4Q-wpU"/>
+                                        </connections>
+                                    </containerView>
+                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SIt-Wg-3YW" userLabel="Messages Container View">
+                                        <rect key="frame" x="0.0" y="115" width="600" height="485"/>
+                                        <connections>
+                                            <segue destination="PsZ-HQ-Oa5" kind="embed" identifier="Messages" id="DHa-9m-KpZ"/>
+                                        </connections>
+                                    </containerView>
                                     <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IB3-Xr-keN">
                                         <rect key="frame" x="0.0" y="23" width="600" height="44"/>
                                         <items>
@@ -149,18 +167,6 @@
                                             <action selector="messagesOffresSegmentedControlTap:" destination="BYZ-38-t0r" eventType="valueChanged" id="DJb-nx-yqX"/>
                                         </connections>
                                     </segmentedControl>
-                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g1m-Ir-SYk" userLabel="Offres Container View">
-                                        <rect key="frame" x="0.0" y="107" width="600" height="493"/>
-                                        <connections>
-                                            <segue destination="FCJ-L6-hba" kind="embed" identifier="Offres" id="H3x-4Q-wpU"/>
-                                        </connections>
-                                    </containerView>
-                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SIt-Wg-3YW" userLabel="Messages Container View">
-                                        <rect key="frame" x="0.0" y="115" width="600" height="485"/>
-                                        <connections>
-                                            <segue destination="PsZ-HQ-Oa5" kind="embed" identifier="Messages" id="DHa-9m-KpZ"/>
-                                        </connections>
-                                    </containerView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -181,7 +187,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="qEJ-ha-QMo" secondAttribute="bottom" id="08n-Lg-ZHI"/>
                             <constraint firstItem="KaZ-QU-W4b" firstAttribute="top" secondItem="rVe-oS-Mbr" secondAttribute="bottom" constant="8" symbolic="YES" id="2Bx-Sr-qoA"/>
@@ -254,15 +260,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" secureTextEntry="YES"/>
                             </textField>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vFw-dq-Rbj">
-                                <rect key="frame" x="188" y="325" width="51" height="31"/>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vFw-dq-Rbj">
+                                <rect key="frame" x="241" y="325" width="51" height="31"/>
                             </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mémoriser" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bAM-zg-xs7">
-                                <rect key="frame" x="252" y="328" width="96" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Vf-i1-6eK">
                                 <rect key="frame" x="241" y="433" width="119" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -271,6 +271,12 @@
                                     <action selector="connectionButton:" destination="4wV-1z-RfI" eventType="touchUpInside" id="jit-g2-Q6v"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Mémoriser" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bAM-zg-xs7">
+                                <rect key="frame" x="301" y="329" width="96" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>

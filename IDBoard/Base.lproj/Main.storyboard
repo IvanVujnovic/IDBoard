@@ -49,7 +49,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
                                     <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VZd-L7-v8i">
-                                        <rect key="frame" x="0.0" y="23" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <items>
                                             <navigationItem title="Retard/Absence" id="8rf-Af-HFd">
                                                 <barButtonItem key="leftBarButtonItem" image="hamburger.png" id="WvW-pF-SjC">
@@ -64,21 +64,21 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="VZd-L7-v8i" secondAttribute="trailing" id="AGC-m2-WUh"/>
-                                    <constraint firstItem="VZd-L7-v8i" firstAttribute="top" secondItem="qEJ-ha-QMo" secondAttribute="topMargin" constant="15" id="Efm-zR-pEY"/>
                                     <constraint firstItem="VZd-L7-v8i" firstAttribute="leading" secondItem="qEJ-ha-QMo" secondAttribute="leading" id="bUY-Le-5NF"/>
+                                    <constraint firstItem="VZd-L7-v8i" firstAttribute="top" secondItem="qEJ-ha-QMo" secondAttribute="top" id="pb6-r0-Veu"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BU2-5n-hsH" userLabel="Planning">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00 - 00 MonthMonth YYYY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ZO-k5-A06">
-                                        <rect key="frame" x="196" y="82" width="208" height="21"/>
+                                        <rect key="frame" x="196" y="59" width="208" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PhB-pF-H4m">
-                                        <rect key="frame" x="429" y="74" width="30" height="39"/>
+                                        <rect key="frame" x="429" y="51" width="30" height="39"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <state key="normal" title="&gt;"/>
                                         <connections>
@@ -86,19 +86,19 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kic-Lv-gZo">
-                                        <rect key="frame" x="141" y="74" width="30" height="39"/>
+                                        <rect key="frame" x="141" y="51" width="30" height="39"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <state key="normal" title="&lt;"/>
                                         <connections>
                                             <action selector="leftRangeDateTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bY7-pY-cqI"/>
                                         </connections>
                                     </button>
-                                    <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xb9-7I-bAs">
-                                        <rect key="frame" x="8" y="123" width="584" height="477"/>
-                                        <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                                    <webView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xb9-7I-bAs">
+                                        <rect key="frame" x="8" y="100" width="584" height="500"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </webView>
                                     <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cmh-Hc-FFG">
-                                        <rect key="frame" x="0.0" y="23" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <items>
                                             <navigationItem title="Planning" id="P05-8e-e2j">
                                                 <barButtonItem key="leftBarButtonItem" image="hamburger.png" id="ez4-cc-AyW">
@@ -118,10 +118,10 @@
                                     <constraint firstItem="Xb9-7I-bAs" firstAttribute="leading" secondItem="BU2-5n-hsH" secondAttribute="leadingMargin" id="BeH-dQ-Xgl"/>
                                     <constraint firstItem="6ZO-k5-A06" firstAttribute="centerY" secondItem="Kic-Lv-gZo" secondAttribute="centerY" constant="-1" id="H3m-Zo-Lrn"/>
                                     <constraint firstItem="cmh-Hc-FFG" firstAttribute="leading" secondItem="BU2-5n-hsH" secondAttribute="leading" id="KHV-3q-NHa"/>
+                                    <constraint firstItem="cmh-Hc-FFG" firstAttribute="top" secondItem="BU2-5n-hsH" secondAttribute="top" id="Kog-MH-iCw"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="Xb9-7I-bAs" secondAttribute="trailing" id="Sxq-Ml-oOV"/>
                                     <constraint firstItem="6ZO-k5-A06" firstAttribute="centerX" secondItem="BU2-5n-hsH" secondAttribute="centerX" id="UgP-iO-alc"/>
                                     <constraint firstItem="PhB-pF-H4m" firstAttribute="centerY" secondItem="Kic-Lv-gZo" secondAttribute="centerY" id="Vpd-PV-Xhk"/>
-                                    <constraint firstItem="cmh-Hc-FFG" firstAttribute="top" secondItem="BU2-5n-hsH" secondAttribute="topMargin" constant="15" id="nnq-pI-qOU"/>
                                     <constraint firstItem="PhB-pF-H4m" firstAttribute="leading" secondItem="6ZO-k5-A06" secondAttribute="trailing" constant="25" id="p2S-Md-ta6"/>
                                     <constraint firstItem="6ZO-k5-A06" firstAttribute="leading" secondItem="Kic-Lv-gZo" secondAttribute="trailing" constant="25" id="t9c-Hp-buA"/>
                                     <constraint firstAttribute="trailing" secondItem="cmh-Hc-FFG" secondAttribute="trailing" id="ueS-vG-POZ"/>
@@ -131,19 +131,19 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g1m-Ir-SYk" userLabel="Offres Container View">
-                                        <rect key="frame" x="0.0" y="107" width="600" height="493"/>
+                                        <rect key="frame" x="0.0" y="84" width="600" height="516"/>
                                         <connections>
                                             <segue destination="FCJ-L6-hba" kind="embed" identifier="Offres" id="H3x-4Q-wpU"/>
                                         </connections>
                                     </containerView>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SIt-Wg-3YW" userLabel="Messages Container View">
-                                        <rect key="frame" x="0.0" y="115" width="600" height="485"/>
+                                        <rect key="frame" x="0.0" y="92" width="600" height="508"/>
                                         <connections>
                                             <segue destination="PsZ-HQ-Oa5" kind="embed" identifier="Messages" id="DHa-9m-KpZ"/>
                                         </connections>
                                     </containerView>
                                     <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IB3-Xr-keN">
-                                        <rect key="frame" x="0.0" y="23" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <items>
                                             <navigationItem title="Historique" id="yFm-FQ-KGe">
                                                 <barButtonItem key="leftBarButtonItem" image="hamburger.png" id="KnP-DT-jER">
@@ -155,7 +155,7 @@
                                         </items>
                                     </navigationBar>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="mLA-6d-oT1">
-                                        <rect key="frame" x="0.0" y="67" width="600" height="41"/>
+                                        <rect key="frame" x="0.0" y="44" width="600" height="41"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="gJQ-p7-UDq"/>
                                         </constraints>
@@ -174,7 +174,6 @@
                                     <constraint firstItem="mLA-6d-oT1" firstAttribute="leading" secondItem="jTg-wb-5XM" secondAttribute="leading" id="7wN-qL-2W1"/>
                                     <constraint firstItem="g1m-Ir-SYk" firstAttribute="leading" secondItem="jTg-wb-5XM" secondAttribute="leading" id="8Qv-gk-akC"/>
                                     <constraint firstAttribute="trailing" secondItem="mLA-6d-oT1" secondAttribute="trailing" id="A3U-hx-qjH"/>
-                                    <constraint firstItem="IB3-Xr-keN" firstAttribute="top" secondItem="jTg-wb-5XM" secondAttribute="topMargin" constant="15" id="Bbj-NL-5VG"/>
                                     <constraint firstItem="SIt-Wg-3YW" firstAttribute="top" secondItem="mLA-6d-oT1" secondAttribute="bottom" constant="8" symbolic="YES" id="PMo-4G-CDM"/>
                                     <constraint firstItem="SIt-Wg-3YW" firstAttribute="leading" secondItem="jTg-wb-5XM" secondAttribute="leading" id="Tke-XB-aWe"/>
                                     <constraint firstAttribute="bottom" secondItem="SIt-Wg-3YW" secondAttribute="bottom" id="YQw-qr-sFj"/>
@@ -184,6 +183,7 @@
                                     <constraint firstItem="mLA-6d-oT1" firstAttribute="top" secondItem="IB3-Xr-keN" secondAttribute="bottom" symbolic="YES" id="e8F-Vz-vaP"/>
                                     <constraint firstItem="IB3-Xr-keN" firstAttribute="leading" secondItem="jTg-wb-5XM" secondAttribute="leading" id="gcd-vu-ypq"/>
                                     <constraint firstAttribute="trailing" secondItem="g1m-Ir-SYk" secondAttribute="trailing" id="qds-4K-3gS"/>
+                                    <constraint firstItem="IB3-Xr-keN" firstAttribute="top" secondItem="jTg-wb-5XM" secondAttribute="top" id="r5Z-Hm-cAe"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -318,7 +318,7 @@
                         <viewControllerLayoutGuide type="bottom" id="uXC-cO-Rwf"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="3q3-Hb-3SZ">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="493"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="516"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     </view>
                 </viewController>
@@ -331,7 +331,7 @@
             <objects>
                 <tableViewController id="PsZ-HQ-Oa5" customClass="MessagesTableViewController" customModule="IDBoard" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="CXn-IT-ZJk">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="485"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="508"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>

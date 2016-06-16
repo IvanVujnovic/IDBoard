@@ -17,12 +17,6 @@ class MessagesTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
         print("Messages \(#function)")
         
@@ -70,7 +64,6 @@ class MessagesTableViewController: UITableViewController {
                         //print("nr obj = \(nr_obj)")
                         
                         for i in 0 ..< nr_obj {
-                            //guard let title = jsonResult[i]["Title"] as? String, let message = jsonResult[i]["Message"] as? String
                             guard let message = jsonResult[i]["Message"] as? String
                                 else {
                                 print("Error = \(jsonResult)")
@@ -91,7 +84,7 @@ class MessagesTableViewController: UITableViewController {
                         print("JSON serialization failure")
                     }
                 }
-//                print(response)
+                // print(response)
             }
         }
         task.resume()

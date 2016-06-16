@@ -35,9 +35,13 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(keyboardUp), name:UIKeyboardWillShowNotification, object: nil);
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(keyboardDown), name:UIKeyboardWillHideNotification, object: nil);
     }
+    
+    override func shouldAutorotate() -> Bool {
+        return false;
+    }
 
     func checkIfUserCredentialsWereSaved() {
-        // Check if the user's credentials are saved
+        // Check if user save his credential
         saved_id = NSUserDefaults.standardUserDefaults().stringForKey("id")
         saved_password = NSUserDefaults.standardUserDefaults().stringForKey("password")
 
@@ -103,7 +107,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
             NSUserDefaults.standardUserDefaults().setObject(passwordTextField.text, forKey: "password")
         }
         else {
-            print("Lose credentials")
+            print("Identifiants oubliée")
             idTextField.text = ""
             passwordTextField.text = ""
             NSUserDefaults.standardUserDefaults().setObject("", forKey: "id")
@@ -118,7 +122,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         let password = passwordTextField.text!
         
         if id.isEmpty || password.isEmpty {
-            showAlert("Error!", message: "User ID and password fields should be filled", actionTitle: "OK")
+            showAlert("Error!", message: "Les champs doivent être obligatoirement rempli", actionTitle: "OK")
         }
 
         // Send a GET HTTP request with the user registration details
@@ -133,7 +137,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
             dispatch_async(dispatch_get_main_queue()) {
                 if error != nil {
                     let err = error!
-                    self.showAlert("Connection error", message: err.localizedDescription, actionTitle: "OK")
+                    self.showAlert("Problème de connexion", message: err.localizedDescription, actionTitle: "OK")
                     return
                 }
 
@@ -151,14 +155,14 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
                             }
                             if res as! String == "NO" {
                                 print("Can't authenticate")
-                                self.showAlert("Error", message: "Identification failed. Please try again.", actionTitle: "OK")
+                                self.showAlert("Error", message: "Identification echoué. Veuillez essayer a nouveau.", actionTitle: "OK")
                             }
                         }
                     } catch {
                         print("JSON serialization failure")
                     }
                 }
-//                print(response)
+                // print(response)
             }
         }
         task.resume()
@@ -176,16 +180,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     @IBAction func prepareForUnwind(segue: UIStoryboardSegue) {
     }
 
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func prefersStatusBarHidden() -> Bool {
+        return true
     }
-    */
-
 }

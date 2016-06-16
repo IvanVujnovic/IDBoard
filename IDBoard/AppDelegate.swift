@@ -12,7 +12,7 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    //let url_root = "http://192.168.0.102/idboard_app/"
+    // Mettre l'url de l'API
     let url_root = "http://youdome.com/idboard/"
     
 
